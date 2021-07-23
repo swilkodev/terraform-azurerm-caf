@@ -22,8 +22,7 @@ resource "azurerm_function_app" "function_app" {
   storage_account_name       = var.storage_account_name
   storage_account_access_key = var.storage_account_access_key
   tags                       = local.tags
-
-  app_settings = local.app_settings
+  app_settings               = local.app_settings
 
   dynamic "auth_settings" {
     for_each = lookup(var.settings, "auth_settings", {}) != {} ? [1] : []
