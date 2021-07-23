@@ -38,11 +38,26 @@ function_apps = {
     app_service_plan_key = "asp1"
     storage_account_key  = "sa1"
 
+    # identity = {
+    #         type                        = "UserAssigned"
+    #         managed_identity_keys       = ["msi_funcapp_weather"]
+    # }
+
+    # app_settings = {
+    #     "WEBSITE_RUN_FROM_PACKAGE"  =   "1"
+    #     "WEBSITE_CONTENTOVERVNET"   =   "1"
+    #     "WEBSITE_VNET_ROUTE_ALL"    =   "1"
+    #     "WEBSITE_DNS_SERVER"        =   "168.63.129.16"
+    # }
+
     settings = {
       vnet_key   = "spoke"
       subnet_key = "app"
 
       enabled = true
+      #https_only  = true
+      #os_type     = "" # Specify blank for windows
+      #version = "~3"
     }
   }
 }
