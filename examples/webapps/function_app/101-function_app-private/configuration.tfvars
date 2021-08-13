@@ -40,7 +40,7 @@ function_apps = {
 
     # identity = {
     #         type                        = "UserAssigned"
-    #         managed_identity_keys       = ["msi_funcapp_weather"]
+    #         managed_identity_keys       = ["msi_funcapp_app"]
     # }
 
     # app_settings = {
@@ -56,7 +56,7 @@ function_apps = {
 
       enabled = true
       #https_only  = true
-      #os_type     = "" # Specify blank for windows
+      #os_type     = "" # Specify blank for Windows OS or use "linux" for Linux OS
       #version = "~3"
     }
   }
